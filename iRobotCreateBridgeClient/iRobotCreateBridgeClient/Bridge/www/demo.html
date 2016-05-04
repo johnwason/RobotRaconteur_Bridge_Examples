@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Bridge iRobotCreateBridgeClient</title>
+    <script src="../output/bridge.js"></script>
+    <script src="../output/RobotRaconteurBridge.js"></script>
+    <script src="../output/iRobotCreateBridgeClient.js"></script>
+</head>
+<body>
+    <h1 style="font-size: 20px;">Robot Raconteur&reg; Create Robot Examples</h1>
+    <div>
+        <h2 style="font-size: 16px;">Webcam</h2>
+        <div id="WebcamLogin">
+            Webcam Url: <input id="WebcamUrl" type="text" style="width: 250pt" value="rr+tcp://localhost:2355/?service=Webcam"/>&nbsp; <button id="ConnectWebcam">Connect</button>
+        </div>
+        <div id="WebcamDisplay" style="display: none">
+            <table>                
+                <tr style="text-align: center"><td><canvas id="image" width="320" height="240" style="border:1px solid #000000;"></canvas></td></tr>
+                <tr style="text-align: center">
+                    <td>
+                        <button id="StartStreaming">Start Streaming</button>&nbsp;
+                        <button id="StopStreaming">Stop Streaming</button>
+                    </td>
+                </tr>
+                <tr style="text-align: center"><td><button id="DisconnectWebcam">Disconnect</button></td></tr>
+            </table>
+        </div>
+    </div>
+    <br />
+    <div>
+        <h2 style="font-size: 16px;">Create Robot</h2>
+        <div id="CreateLogin">
+            Create Url: <input id="CreateUrl" type="text" style="width: 250pt" value="rr+tcp://localhost:2354/?service=Create" />&nbsp; <button id="ConnectCreate">Connect</button>
+        </div>
+        <div id="CreateDisplay" style="display: none">
+            <table>
+                <tr><td></td><td><button id="forward" style="width: 100pt">Forward</button></td></tr>
+                <tr><td><button id="spinleft" style="width: 100pt">Left</button></td><td><button id="stop" style="width: 100pt">Stop</button></td><td><button id="spinright" style="width: 100pt">Right</button></td></tr>
+                <tr><td></td><td><button id="reverse" style="width: 100pt">Reverse</button></td><td></td></tr>                
+            </table>
+            <input type="checkbox" disabled="disabled" id="enablegamepad" />Enable Gamepad<br />
+            <button id="DisconnectCreate">Disconnect</button>
+            
+        </div>
+    </div>
+</body>
+</html>
